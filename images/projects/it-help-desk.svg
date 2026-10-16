@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="IT help desk dashboard preview">
+  <rect width="800" height="500" fill="#0b1322"/>
+
+  <!-- browser window -->
+  <rect x="46" y="34" width="708" height="432" rx="12" fill="#0d1526" stroke="#1c2841" stroke-width="1.5"/>
+
+  <!-- title bar -->
+  <path d="M46 46a12 12 0 0 1 12-12h684a12 12 0 0 1 12 12v32H46Z" fill="#111b30"/>
+  <circle cx="72" cy="56" r="5.5" fill="#ef4444"/>
+  <circle cx="92" cy="56" r="5.5" fill="#f59e0b"/>
+  <circle cx="112" cy="56" r="5.5" fill="#22c55e"/>
+  <rect x="150" y="45" width="300" height="22" rx="11" fill="#0b1322" stroke="#1c2841"/>
+  <circle cx="166" cy="56" r="4" fill="#34d399"/>
+  <text x="180" y="60" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11" fill="#9aa7bd">localhost:8080/tickets</text>
+
+  <!-- sidebar -->
+  <rect x="46" y="78" width="150" height="388" fill="#0a1120"/>
+  <text x="66" y="110" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="13" font-weight="500" fill="#34d399">IT·HD</text>
+  <g font-family="Inter, sans-serif" font-size="12" fill="#9aa7bd">
+    <rect x="58" y="132" width="126" height="32" rx="7" fill="#122038"/>
+    <rect x="66" y="142" width="12" height="12" rx="3" fill="#34d399"/>
+    <text x="86" y="152" fill="#e6edf6">Dashboard</text>
+    <rect x="66" y="184" width="12" height="12" rx="3" fill="#38bdf8"/>
+    <text x="86" y="194">Tickets</text>
+    <rect x="66" y="226" width="12" height="12" rx="3" fill="#5b6a83"/>
+    <text x="86" y="236">Assets</text>
+    <rect x="66" y="268" width="12" height="12" rx="3" fill="#5b6a83"/>
+    <text x="86" y="278">Users</text>
+    <rect x="66" y="310" width="12" height="12" rx="3" fill="#5b6a83"/>
+    <text x="86" y="320">History</text>
+  </g>
+  <rect x="58" y="414" width="126" height="34" rx="7" fill="#0b1322" stroke="#1c2841"/>
+  <circle cx="76" cy="431" r="9" fill="#1c2841"/>
+  <rect x="86" y="424" width="52" height="6" rx="3" fill="#5b6a83"/>
+  <rect x="86" y="434" width="36" height="5" rx="2.5" fill="#3a4a66"/>
+
+  <!-- main header -->
+  <text x="220" y="118" font-family="Poppins, Inter, sans-serif" font-size="19" font-weight="600" fill="#e6edf6">Tickets</text>
+  <rect x="632" y="96" width="102" height="32" rx="8" fill="#10b981"/>
+  <text x="683" y="116" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#04140d" text-anchor="middle">+ New Ticket</text>
+
+  <!-- stat cards -->
+  <g>
+    <rect x="220" y="140" width="158" height="64" rx="10" fill="#111b30" stroke="#1c2841"/>
+    <circle cx="240" cy="160" r="4" fill="#34d399"/>
+    <text x="252" y="164" font-family="Inter, sans-serif" font-size="11" fill="#9aa7bd">Open</text>
+    <rect x="236" y="180" width="110" height="8" rx="4" fill="#1c2841"/>
+    <rect x="236" y="180" width="74" height="8" rx="4" fill="#34d399" opacity="0.7"/>
+
+    <rect x="394" y="140" width="158" height="64" rx="10" fill="#111b30" stroke="#1c2841"/>
+    <circle cx="414" cy="160" r="4" fill="#fbbf24"/>
+    <text x="426" y="164" font-family="Inter, sans-serif" font-size="11" fill="#9aa7bd">In progress</text>
+    <rect x="410" y="180" width="110" height="8" rx="4" fill="#1c2841"/>
+    <rect x="410" y="180" width="46" height="8" rx="4" fill="#fbbf24" opacity="0.7"/>
+
+    <rect x="568" y="140" width="158" height="64" rx="10" fill="#111b30" stroke="#1c2841"/>
+    <circle cx="588" cy="160" r="4" fill="#38bdf8"/>
+    <text x="600" y="164" font-family="Inter, sans-serif" font-size="11" fill="#9aa7bd">Resolved</text>
+    <rect x="584" y="180" width="110" height="8" rx="4" fill="#1c2841"/>
+    <rect x="584" y="180" width="96" height="8" rx="4" fill="#38bdf8" opacity="0.7"/>
+  </g>
+
+  <!-- table -->
+  <rect x="220" y="224" width="506" height="34" rx="8" fill="#0f1929"/>
+  <text x="236" y="246" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="10" fill="#5b6a83">TICKET</text>
+  <text x="470" y="246" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="10" fill="#5b6a83">STATUS</text>
+  <text x="640" y="246" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="10" fill="#5b6a83">ASSIGNEE</text>
+
+  <g font-family="Inter, sans-serif" font-size="11">
+    <rect x="220" y="266" width="506" height="38" rx="8" fill="#111b30" stroke="#1c2841"/>
+    <text x="236" y="290" fill="#e6edf6">Monitor flickering</text>
+    <rect x="456" y="278" width="70" height="17" rx="8.5" fill="rgba(52,211,153,.14)" stroke="#34d399" stroke-width="1"/>
+    <text x="491" y="290" fill="#34d399" text-anchor="middle" font-size="9.5">OPEN</text>
+    <circle cx="648" cy="285" r="8" fill="#1c2841"/><rect x="664" y="281" width="44" height="6" rx="3" fill="#5b6a83"/>
+
+    <rect x="220" y="312" width="506" height="38" rx="8" fill="#111b30" stroke="#1c2841"/>
+    <text x="236" y="336" fill="#e6edf6">Keyboard replacement</text>
+    <rect x="456" y="324" width="70" height="17" rx="8.5" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="1"/>
+    <text x="491" y="336" fill="#fbbf24" text-anchor="middle" font-size="9.5">IN PROG</text>
+    <circle cx="648" cy="331" r="8" fill="#1c2841"/><rect x="664" y="327" width="52" height="6" rx="3" fill="#5b6a83"/>
+
+    <rect x="220" y="358" width="506" height="38" rx="8" fill="#111b30" stroke="#1c2841"/>
+    <text x="236" y="382" fill="#e6edf6">New asset tag — laptop</text>
+    <rect x="456" y="370" width="70" height="17" rx="8.5" fill="rgba(56,189,248,.12)" stroke="#38bdf8" stroke-width="1"/>
+    <text x="491" y="382" fill="#38bdf8" text-anchor="middle" font-size="9.5">RESOLVED</text>
+    <circle cx="648" cy="377" r="8" fill="#1c2841"/><rect x="664" y="373" width="40" height="6" rx="3" fill="#5b6a83"/>
+
+    <rect x="220" y="404" width="506" height="38" rx="8" fill="#111b30" stroke="#1c2841"/>
+    <text x="236" y="428" fill="#e6edf6">Password reset</text>
+    <rect x="456" y="416" width="70" height="17" rx="8.5" fill="rgba(56,189,248,.12)" stroke="#38bdf8" stroke-width="1"/>
+    <text x="491" y="428" fill="#38bdf8" text-anchor="middle" font-size="9.5">RESOLVED</text>
+    <circle cx="648" cy="423" r="8" fill="#1c2841"/><rect x="664" y="419" width="48" height="6" rx="3" fill="#5b6a83"/>
+  </g>
+</svg>

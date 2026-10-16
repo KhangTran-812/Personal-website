@@ -1,72 +1,260 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khang B. Tran | CS Student &amp; Application Developer</title>
+  <meta name="description" content="Portfolio of Khang B. Tran, a Computer Science student specializing in full-stack Java/Python development and Quality Assurance.">
+  <meta name="author" content="Khang B. Tran">
+  <meta property="og:title" content="Khang B. Tran | CS Student &amp; Application Developer">
+  <meta property="og:description" content="Building reliable, data-driven software. Full-stack development (Java/Python) and Quality Assurance.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#060b16">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Khang Tran</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#social">Social Media</a></li>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top">KT<span>.</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-resume" href="resume.pdf" download>Resume ↓</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <p class="hero-eyebrow">Hi, my name is</p>
+      <h1>Khang B. Tran<span class="accent-dot">.</span></h1>
+      <p class="hero-sub">
+        <span class="hero-sub-static">Computer Science Student &amp;</span>
+        <span class="hero-typed"><span id="typed">Aspiring Application Developer</span></span>
+      </p>
+      <p class="hero-tagline">Building reliable, data-driven software. Specializing in full-stack development (Java/Python) and Quality Assurance.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View My Projects <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-outline" href="resume.pdf" download>Download Resume <span aria-hidden="true">⤓</span></a>
+        <a class="btn btn-ghost" href="#contact">Get in Touch <span aria-hidden="true">↗</span></a>
+      </div>
+      <ul class="social-row" aria-label="Social profiles">
+        <li><a href="https://github.com/KhangTran-812" target="_blank" rel="noreferrer" aria-label="GitHub (KhangTran-812)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/khang-tran-863778303/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a></li>
+        <li><a href="https://x.com/KhangEKS" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg></a></li>
+        <li><a href="mailto:khangwrktran@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.46v13.08c0 1.53-1.24 2.77-2.77 2.77H2.77C1.24 21.31 0 20.07 0 18.54V5.46c0-1.09.63-2.03 1.55-2.49l10.45 6.9 10.45-6.9A2.77 2.77 0 0 1 24 5.46ZM.86 2.87A2.77 2.77 0 0 0 0 4.15l.05.36L12 12.3 23.95 4.5l.05-.35c0-.47-.12-.91-.33-1.29L12 10.75.86 2.87Z"/></svg></a></li>
+      </ul>
+      <p class="hero-available"><span class="status-dot" aria-hidden="true"></span>Open to internships and junior developer opportunities</p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>I am a third-year B.S. Computer Science student at the City College of Angeles with a passion for building robust applications and ensuring they work flawlessly.</p>
+          <p>My experience spans from developing a Python-based route-optimization web app using Genetic Algorithms, to building a full-stack IT Help Desk system using Java and Spring Boot. What sets me apart is my background in Quality Assurance — having executed over 400+ test cases at a 100% pass rate, I write code with testing, edge cases, and user experience in mind.</p>
+          <p>When I'm not coding, I leverage my background in video production and social media management to communicate technical ideas clearly and engagingly.</p>
+          <dl class="fact-row">
+            <div><dt>2028</dt><dd>Expected graduation</dd></div>
+            <div><dt>426</dt><dd>Test cases executed</dd></div>
+            <div><dt>100%</dt><dd>Pass rate</dd></div>
+          </dl>
+        </div>
+        <div class="about-photo reveal">
+          <figure class="portrait-card">
+            <img src="images/khangtran.jpg" alt="Portrait of Khang B. Tran" width="200" height="200" loading="lazy">
+          </figure>
+          <p class="portrait-caption">Khang B. Tran · Angeles City, PH</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2>Projects</h2>
+        <p class="section-note">Things I've designed, built, and tested.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <a class="project-media" href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+            <img src="images/projects/garbage-optimizer.svg" alt="" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-index">01 · Optimization Research</p>
+            <h3>Garbage Route Optimizer</h3>
+            <p class="project-desc">A web application that solves capacity-aware vehicle routing for garbage trucks using a Genetic Algorithm with 2-opt local search.</p>
+            <ul class="project-highlights">
+              <li>Integrated real OpenStreetMap road networks with interactive multi-truck maps.</li>
+              <li>Live tracking for fuel, cost, and CO₂ emissions.</li>
             </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <img src="imge/khangtran.jpg" alt="My Face">
-            <h2>About Me</h2>
-            <p>Driven and adaptable programmer with a passion for leveraging technology to create innovative solutions. 
-                Proficient in various programming languages including C++, C, Python, JavaScript, HTML, and CSS. Skilled in utilizing Git and Visual Studio to streamline processes and enhance productivity. Committed to continuous learning and growth in the ever-evolving field of programming.</p>
-            <p>Feel free to browse and get to know me better.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Information</h2>
-            <ul>
-                <li>Email: khang01tran@gmail.com</li>
-                <li>Phone: (+63) 965-899-7175</li>
-                <li>Location: Angeles City, Philippines</li>
+            <ul class="tag-list" aria-label="Tech stack">
+              <li>Python</li><li>Streamlit</li><li>OSMnx</li><li>Folium</li>
             </ul>
-        </div>
-    </section>
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li>B.S. in Computer Science with Specialization in Artificial Intelligence (1st year) </li>
-                 </ul>
-        </div>
-    </section>
+            <div class="project-links">
+              <a href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
 
-    <section id="social">
-        <div class="container">
-            <h2>Connect with Me on Social Media</h2>
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=100005383470503"><img src="imge/fbgago.png" alt="Facebook"></a></li>
-                <li><a href="https://twitter.com/KhangTweet"><img src="imge/x.jpg" alt="Twitter"></a></li>
-                <li><a href="https://www.instagram.com/khang.grams/"><img src="imge/Instagram_icon.png" alt="Instagram"></a></li>
-                <li><a href="https://www.linkedin.com/in/khang-tran-a8ab812a1/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="imge/LinkedIn.png" alt="LinkedIn"></a></li>
+        <article class="project-card reveal">
+          <a class="project-media" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+            <img src="images/projects/it-help-desk.svg" alt="" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-index">02 · Full-Stack Development</p>
+            <h3>IT Help Desk &amp; Asset Management System</h3>
+            <p class="project-desc">A full-stack enterprise application featuring secure authentication, role-based access control, and ticket tracking.</p>
+            <ul class="project-highlights">
+              <li>Normalized databases with Flyway migrations and CSRF protection.</li>
+              <li>Code reliability ensured with JUnit/Mockito tests.</li>
             </ul>
-        </div>
+            <ul class="tag-list" aria-label="Tech stack">
+              <li>Java</li><li>Spring Boot</li><li>Thymeleaf</li><li>MySQL</li><li>Spring Security</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media" aria-hidden="true">
+            <img src="images/projects/qa-suite.svg" alt="" loading="lazy">
+          </div>
+          <div class="project-body">
+            <p class="project-index">03 · Quality Assurance</p>
+            <h3>Investagrams QA Regression Suite</h3>
+            <p class="project-desc">Built and executed a 142-case regression suite across 13 modules (KYC, portfolio, watchlist) for the InvestaTrade web app.</p>
+            <ul class="project-highlights">
+              <li>100% pass rate across 426 test cases (142 × 3 environments).</li>
+              <li>Prioritized cases by risk, covering boundary and negative inputs.</li>
+            </ul>
+            <ul class="tag-list" aria-label="Tech stack">
+              <li>QA Testing</li><li>Test Cases</li><li>Regression</li>
+            </ul>
+            <div class="project-links">
+              <a href="mailto:khangwrktran@gmail.com?subject=QA%20documentation%20request">Request QA documentation <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; Code and Reload</p>
-    </footer>
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>Skills</h2>
+        <p class="section-note">The tools I reach for.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>Languages</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>Java</li><li>C++</li><li>SQL</li><li>JavaScript</li><li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 9L2 6v2l10 5 10-5V6l-10 5Zm0 5L2 11v2l10 5 10-5v-2l-10 5Zm0 5L2 16v2l10 5 10-5v-2l-10 5Z"/></svg>Frameworks &amp; Libraries</h3>
+          <ul class="tag-list">
+            <li>Spring Boot</li><li>Spring Data JPA</li><li>Spring Security</li><li>Streamlit</li><li>Folium</li><li>OSMnx</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4Zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2Zm6 12c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.53.74 3.66 1.23 6 1.23s4.47-.49 6-1.23V17Zm0-4.5c0 .5-2.13 2-6 2s-6-1.5-6-2V8.27c1.53.74 3.66 1.23 6 1.23s4.47-.49 6-1.23v4.23Z"/></svg>Databases</h3>
+          <ul class="tag-list">
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 20.29l-4.6-4.6A8.94 8.94 0 0 0 19 10a9 9 0 1 0-9 9 8.94 8.94 0 0 0 5.69-1.89l4.6 4.6 1.42-1.42ZM4 10a7 7 0 1 1 14 0 7 7 0 0 1-14 0Zm3-1h8v2H7V9Zm0-3h8v2H7V6Z"/></svg>Testing &amp; Tools</h3>
+          <ul class="tag-list">
+            <li>JUnit</li><li>Mockito</li><li>Pytest</li><li>Git</li><li>Visual Studio Code</li><li>Cisco Packet Tracer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2>Experience &amp; Leadership</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <p class="timeline-date">Sep 2026 — Present · Remote</p>
+          <h3>Quality Assurance Intern <span class="timeline-org">· Investagrams Inc.</span></h3>
+          <ul class="timeline-points">
+            <li>Executed 426 test cases (142 × 3 environments) on the InvestaTrade web app with a <strong>100% pass rate</strong>.</li>
+            <li>Built a 142-case regression suite across <strong>13 modules</strong>, including KYC, portfolio, Explore, watchlist, and cash-in.</li>
+            <li>Prioritized cases by risk — 71 High, 59 Medium, 12 Low — and wrote boundary and negative-input cases for KYC and stock details.</li>
+          </ul>
+          <ul class="metric-row" aria-label="Key metrics">
+            <li><strong>426</strong><span>tests executed</span></li>
+            <li><strong>100%</strong><span>pass rate</span></li>
+            <li><strong>13</strong><span>modules covered</span></li>
+          </ul>
+        </article>
+        <article class="timeline-item reveal">
+          <p class="timeline-date">Aug 2021 — Jun 2023 · Angeles, Pampanga</p>
+          <h3>Business Manager / Videographer / Editor <span class="timeline-org">· Republic Central Colleges</span></h3>
+          <ul class="timeline-points">
+            <li>Produced and edited 15 school videos in Adobe Premiere Pro, reaching <strong>41,575 total views</strong>.</li>
+            <li>Ran the team's social media strategy, growing the school's Facebook following by <strong>2,000</strong> — proof that I understand marketing, UI/UX, and audience engagement.</li>
+          </ul>
+          <ul class="metric-row" aria-label="Key metrics">
+            <li><strong>41,575</strong><span>total views</span></li>
+            <li><strong>15</strong><span>videos produced</span></li>
+            <li><strong>+2,000</strong><span>followers gained</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="section-head reveal">
+        <span class="section-num">05</span>
+        <h2>Get in Touch</h2>
+      </div>
+      <div class="contact-body reveal">
+        <p>I'm open to internships, junior developer roles, and QA opportunities. My inbox is always open — whether you have a question, a project idea, or just want to say hi, I'll do my best to get back to you.</p>
+        <a class="btn btn-primary btn-lg" href="mailto:khangwrktran@gmail.com">Say Hello <span aria-hidden="true">↗</span></a>
+        <ul class="social-links" aria-label="Social profiles">
+          <li><a href="https://github.com/KhangTran69" target="_blank" rel="noreferrer">GitHub <span class="social-handle">/ KhangTran69</span></a></li>
+          <li><a href="https://www.linkedin.com/in/khang-tran-863778303/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn <span class="social-handle">/ Khang Tran</span></a></li>
+          <li><a href="https://x.com/KhangEKS" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>X <span class="social-handle">/ @KhangEKS</span></a></li>
+          <li><a href="https://web.facebook.com/KhangEfbi/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.62 23.09 24 18.1 24 12.07Z"/></svg>Facebook <span class="social-handle">/ KhangEfbi</span></a></li>
+          <li><a href="https://www.instagram.com/khang.grams/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.47 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4ZM19.85 5.59a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>Instagram <span class="social-handle">/ @khang.grams</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Khang B. Tran. Built with HTML/CSS/JS.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-```

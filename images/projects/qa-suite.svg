@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="QA regression suite results preview">
+  <rect width="800" height="500" fill="#0b1322"/>
+
+  <!-- header -->
+  <text x="44" y="58" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="15" font-weight="500" fill="#34d399">InvestaTrade · QA Regression Suite</text>
+  <text x="44" y="82" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11" fill="#9aa7bd">142 cases · 13 modules · 3 environments</text>
+  <rect x="612" y="40" width="144" height="32" rx="16" fill="rgba(52,211,153,.1)" stroke="#34d399"/>
+  <text x="684" y="60" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11" fill="#34d399" text-anchor="middle">426 PASSED</text>
+
+  <!-- pass-rate ring -->
+  <circle cx="170" cy="262" r="86" fill="none" stroke="#1c2841" stroke-width="15"/>
+  <circle cx="170" cy="262" r="86" fill="none" stroke="#34d399" stroke-width="15" stroke-linecap="round"
+          stroke-dasharray="540.35 0" transform="rotate(-90 170 262)"/>
+  <text x="170" y="258" font-family="Poppins, Inter, sans-serif" font-size="38" font-weight="700" fill="#e6edf6" text-anchor="middle">100%</text>
+  <text x="170" y="284" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11" fill="#9aa7bd" text-anchor="middle">pass rate</text>
+  <text x="170" y="382" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="10" fill="#5b6a83" text-anchor="middle">142 cases × 3 environments</text>
+
+  <!-- module chips -->
+  <g font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11">
+    <g>
+      <rect x="330" y="120" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M348 140l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="372" y="145" fill="#e6edf6">KYC validation</text>
+
+      <rect x="546" y="120" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M564 140l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="588" y="145" fill="#e6edf6">Portfolio</text>
+
+      <rect x="330" y="172" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M348 192l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="372" y="197" fill="#e6edf6">Watchlist</text>
+
+      <rect x="546" y="172" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M564 192l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="588" y="197" fill="#e6edf6">Explore</text>
+
+      <rect x="330" y="224" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M348 244l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="372" y="249" fill="#e6edf6">Cash-in</text>
+
+      <rect x="546" y="224" width="200" height="40" rx="10" fill="#0c1322" stroke="#1c2841"/>
+      <path d="M564 244l5 5 9-10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="588" y="249" fill="#e6edf6">Stock details</text>
+
+      <rect x="330" y="276" width="416" height="40" rx="10" fill="#0c1322" stroke="#1c2841" stroke-dasharray="5 5"/>
+      <text x="352" y="301" fill="#5b6a83">+ 7 more modules covered</text>
+    </g>
+  </g>
+
+  <!-- risk distribution -->
+  <rect x="330" y="336" width="416" height="130" rx="12" fill="#0c1322" stroke="#1c2841"/>
+  <text x="350" y="364" font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="11" fill="#9aa7bd">Risk-prioritized cases</text>
+  <g font-family="Roboto Mono, ui-monospace, Menlo, monospace" font-size="10">
+    <text x="350" y="392" fill="#5b6a83">HIGH</text>
+    <rect x="404" y="382" width="220" height="14" rx="7" fill="#34d399"/>
+    <text x="634" y="393" fill="#e6edf6">71</text>
+
+    <text x="350" y="420" fill="#5b6a83">MED</text>
+    <rect x="404" y="410" width="184" height="14" rx="7" fill="#38bdf8"/>
+    <text x="598" y="421" fill="#e6edf6">59</text>
+
+    <text x="350" y="448" fill="#5b6a83">LOW</text>
+    <rect x="404" y="438" width="38" height="14" rx="7" fill="#fbbf24"/>
+    <text x="452" y="449" fill="#e6edf6">12</text>
+  </g>
+</svg>
