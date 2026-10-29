@@ -38,4 +38,5 @@ https://khangtran-812.github.io/Personal-website/.
 - Replace `resume.pdf` with an updated PDF to change the downloadable resume. No source DOCX is included here.
 - Keep experience and project metrics aligned with their source records. The QA figures describe
   142 test cases run in three environments (426 executions), not overall product quality.
-- GitHub `KhangTran69` is the primary profile. The hero icon also links to `KhangTran-812` pending confirmation whether to retain it.
+- `KhangTran69` is the personal GitHub profile. The GitHub Pages hostname reflects the upstream
+  repository `KhangTran-812/Personal-website`; it is hosting context, not a second personal profile.
