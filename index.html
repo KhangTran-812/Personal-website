@@ -115,15 +115,15 @@
 
         <article class="project-card reveal">
           <a class="project-media" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
-            <img src="images/projects/it-help-desk.svg" alt="" loading="lazy">
+            <img src="images/projects/it-help-desk.png" alt="" loading="lazy">
           </a>
           <div class="project-body">
             <p class="project-index">02 · Full-Stack Development</p>
             <h3>IT Help Desk &amp; Asset Management System</h3>
-            <p class="project-desc">A full-stack enterprise application featuring secure authentication, role-based access control, and ticket tracking.</p>
+            <p class="project-desc">Employees need a clear way to request help while technicians need a reliable queue. I built role-scoped ticket and asset workflows with visible progress and audit history.</p>
             <ul class="project-highlights">
               <li>Normalized databases with Flyway migrations and CSRF protection.</li>
-              <li>Code reliability ensured with JUnit/Mockito tests.</li>
+              <li>Stale edits are rejected so one technician cannot silently overwrite another.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack">
               <li>Java</li><li>Spring Boot</li><li>Thymeleaf</li><li>MySQL</li><li>Spring Security</li>
@@ -135,11 +135,45 @@
         </article>
 
         <article class="project-card reveal">
+          <a class="project-media" href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+            <img src="images/projects/popify.jpg" alt="" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-index">03 · Workflow Automation</p>
+            <h3>PoPify</h3>
+            <p class="project-desc">Delayed orders need a response that reflects the order facts. I built a local operator workflow that drafts a reply, asks for human approval, and records the mock outcome.</p>
+            <ul class="project-highlights">
+              <li>Three n8n workflows coordinate durable intake, support triage, and follow-up.</li>
+              <li>Uncertain outcomes enter a recovery flow instead of being silently retried.</li>
+            </ul>
+            <ul class="tag-list" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>n8n</li></ul>
+            <div class="project-links"><a href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a class="project-media" href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+            <img src="images/projects/sms-spam-detector.png" alt="" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-index">04 · Machine Learning</p>
+            <h3>Philippine SMS Spam Detector</h3>
+            <p class="project-desc">Suspicious messages can be hard to judge across English, Filipino, and Taglish. I built an assistive classifier and web interface that explain detected signals.</p>
+            <ul class="project-highlights">
+              <li>Supports single, batch, and side-by-side message checks.</li>
+              <li>Philippine evaluation data is synthetic; real-world accuracy is unproven.</li>
+            </ul>
+            <ul class="tag-list" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>scikit-learn</li></ul>
+            <div class="project-links"><a href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
           <div class="project-media" aria-hidden="true">
             <img src="images/projects/qa-suite.svg" alt="" loading="lazy">
           </div>
           <div class="project-body">
-            <p class="project-index">03 · Quality Assurance</p>
+            <p class="project-index">05 · Quality Assurance</p>
             <h3>Investagrams QA Regression Suite</h3>
             <p class="project-desc">Built and executed a 142-case regression suite across 13 modules (KYC, portfolio, watchlist) for the InvestaTrade web app.</p>
             <ul class="project-highlights">
