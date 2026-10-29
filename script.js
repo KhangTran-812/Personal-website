@@ -12,29 +12,6 @@
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Typing effect ---------- */
-  // Static fallback text already lives in the HTML (#typed), so the page
-  // reads correctly even if the CDN script or JS is unavailable.
-  function initTyped() {
-    if (typeof window.Typed !== "function") return;
-    var target = document.getElementById("typed");
-    if (!target || prefersReducedMotion) return;
-
-    new window.Typed("#typed", {
-      strings: [
-        "Aspiring Application Developer",
-        "Quality Assurance Enthusiast",
-        "Full-Stack Java Developer"
-      ],
-      typeSpeed: 45,
-      backSpeed: 28,
-      backDelay: 2000,
-      startDelay: 600,
-      loop: true,
-      smartBackspace: false
-    });
-  }
-
   /* ---------- Mobile navigation ---------- */
   function initNav() {
     var toggle = document.getElementById("nav-toggle");
@@ -46,11 +23,24 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
+    function closeNav(restoreFocus) {
+      nav.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (restoreFocus) toggle.focus();
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("nav-open")) closeNav(true);
+    });
+
+    document.addEventListener("click", function (e) {
+      if (nav.classList.contains("nav-open") && !nav.contains(e.target) && !toggle.contains(e.target)) closeNav(false);
+    });
+
     // Close the panel after choosing a destination.
     nav.addEventListener("click", function (e) {
       if (e.target.closest("a")) {
-        nav.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeNav(false);
       }
     });
   }
@@ -115,7 +105,6 @@
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
-  initTyped();
   initNav();
   initReveal();
   initScrollspy();

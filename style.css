@@ -631,8 +631,10 @@ img { max-width: 100%; display: block; }
 /* The hidden start state is scoped to .js so content stays visible when
    JavaScript is unavailable, and is forced on for print. */
 
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.js .reveal { transition: opacity 0.45s ease, transform 0.45s ease; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
+.media-caption { display: block; padding: 5px 12px; color: var(--muted); font-size: .72rem; font-family: var(--font-mono); }
+.contact-alternative { display: inline-block; margin: 0 0 1.5rem 1rem; font-size: .9rem; }
 
 @media print {
   .js .reveal { opacity: 1 !important; transform: none !important; }
@@ -667,6 +669,7 @@ img { max-width: 100%; display: block; }
   .site-nav a { padding: 13px 4px; font-size: 0.95rem; border-bottom: 1px solid var(--border); }
   .site-nav a:last-child { border-bottom: 0; }
   .nav-resume { align-self: flex-start; margin-top: 10px; }
+  .contact-alternative { margin: .8rem 0 1.5rem; }
 
   .hero { padding: 80px 20px 70px; min-height: 0; }
   .section { padding: 72px 20px; }
