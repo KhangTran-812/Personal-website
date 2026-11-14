@@ -105,14 +105,14 @@
             <p class="project-desc">A workflow automation API for support-ticket intake and employee onboarding. It validates and routes requests, gates sensitive steps for approval, and records execution history.</p>
             <ul class="project-highlights">
               <li>The local reviewer demo uses synthetic tickets to show routing, idempotent replay, and a tenant-scoped read boundary.</li>
-              <li>Provider clients and workflow exports are included; live provider behavior requires configuration and is not exercised by the local demo.</li>
+              <li>Clean-main verification: 461 tests passed, 20 skipped. External provider behavior requires credentials and is not exercised by the local demo.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack">
               <li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>PostgreSQL</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/KhangTran69/flowops" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md" target="_blank" rel="noreferrer">Reviewer walkthrough <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for FlowOps">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -125,16 +125,18 @@
           <div class="project-body">
             <p class="project-index">02 · Optimization Research</p>
             <h3>Garbage Route Optimizer</h3>
-            <p class="project-desc">A web application that solves capacity-aware vehicle routing for garbage trucks using a Genetic Algorithm with 2-opt local search.</p>
+            <p class="project-desc">A thesis research prototype for approximate, capacity-aware truck routing using a Genetic Algorithm with 2-opt local search.</p>
             <ul class="project-highlights">
-              <li>Integrated real OpenStreetMap road networks with interactive multi-truck maps.</li>
-              <li>Live tracking for fuel, cost, and CO₂ emissions.</li>
+              <li>The app can use OpenStreetMap road distances and interactive multi-truck maps; this benchmark used built-in coordinates and straight-line distances.</li>
+              <li>Clean-main checks: 74 tests passed; all nine synthetic benchmark runs were feasible. No live road graph or operational data was used, so route quality is unverified.</li>
+              <li>Fuel, cost, and CO₂ values are estimates from configured assumptions; demand estimates are illustrative.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack">
               <li>Python</li><li>Streamlit</li><li>OSMnx</li><li>Folium</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/angeles-city-garbage-optimizer/blob/main/README.md#reproduce-the-optimizer-sensitivity-report" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for Garbage Route Optimizer">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -149,13 +151,14 @@
             <p class="project-desc">Employees need a clear way to request help while technicians need a reliable queue. I built role-scoped ticket and asset workflows with visible progress and audit history.</p>
             <ul class="project-highlights">
               <li>Normalized databases with Flyway migrations and CSRF protection.</li>
-              <li>Stale edits are rejected so one technician cannot silently overwrite another.</li>
+              <li>Local H2 walkthrough uses a seeded synthetic ticket; 107 tests passed, with 5 Docker/opt-in Selenium checks skipped.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack">
               <li>Java</li><li>Spring Boot</li><li>Thymeleaf</li><li>MySQL</li><li>Spring Security</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for IT Help Desk">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -169,11 +172,14 @@
             <h3>PoPify</h3>
             <p class="project-desc">Delayed orders need a response that reflects the order facts. I built a local operator workflow that drafts a reply, asks for human approval, and records the mock outcome.</p>
             <ul class="project-highlights">
-              <li>Three n8n workflows coordinate durable intake, support triage, and follow-up.</li>
-              <li>Uncertain outcomes enter a recovery flow instead of being silently retried.</li>
+              <li>Local suite: 113 tests passed. The isolated synthetic preview covers approval, rejection, retry, and recovery.</li>
+              <li>The Docker path could not run, so PostgreSQL and n8n runtime remain unverified in this review.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>n8n</li></ul>
-            <div class="project-links"><a href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div>
+            <div class="project-links">
+              <a href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/popify/blob/main/README.md#isolated-interface-preview-without-docker" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for PoPify">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
 
@@ -187,10 +193,13 @@
             <p class="project-desc">Suspicious messages can be hard to judge across English, Filipino, and Taglish. I built an assistive classifier and web interface that explain detected signals.</p>
             <ul class="project-highlights">
               <li>Supports single, batch, and side-by-side message checks.</li>
-              <li>Philippine evaluation data is synthetic; real-world accuracy is unproven.</li>
+              <li>Clean suite: 526 tests passed, 3 skipped because the optional public corpus was not downloaded. The repeated synthetic-only benchmark does not establish real-world Philippine accuracy.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>scikit-learn</li></ul>
-            <div class="project-links"><a href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div>
+            <div class="project-links">
+              <a href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/sms-spam-detector/blob/main/README.md#quickstart" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for Philippine SMS Spam Detector">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
 
@@ -215,6 +224,7 @@
           </div>
         </article>
       </div>
+      <p class="project-reserve">Bid Trace remains a <a href="https://github.com/KhangTran69/bid-trace" target="_blank" rel="noreferrer">reserve synthetic local demo</a>, outside the active walkthrough.</p>
     </section>
 
     <!-- ============ SKILLS ============ -->
