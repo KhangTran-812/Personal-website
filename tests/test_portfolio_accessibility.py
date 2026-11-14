@@ -15,17 +15,21 @@ class PortfolioParser(HTMLParser):
         self._card = None
         self._heading = False
         self._link = None
+        self._card_link = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         classes = attrs.get("class", "").split()
         if tag == "article" and "project-card" in classes:
-            self._card = {"title": "", "text": ""}
+            self._card = {"title": "", "text": "", "links": []}
             self.project_cards.append(self._card)
         if tag == "h3" and self._card:
             self._heading = True
         if tag == "a":
             href = attrs.get("href", "")
+            if self._card is not None:
+                self._card_link = {"href": href, "text": ""}
+                self._card["links"].append(self._card_link)
             if "project-media" in classes:
                 self._link = {"attrs": attrs, "image_alts": []}
                 self.media_links.append(self._link)
@@ -39,6 +43,7 @@ class PortfolioParser(HTMLParser):
             self._heading = False
         if tag == "a":
             self._link = None
+            self._card_link = None
         if tag == "article":
             self._card = None
 
@@ -47,6 +52,8 @@ class PortfolioParser(HTMLParser):
             self._card["text"] += data
             if self._heading:
                 self._card["title"] += data
+            if self._card_link is not None:
+                self._card_link["text"] += data
 
 
 class PortfolioAccessibilityTests(unittest.TestCase):
@@ -84,6 +91,48 @@ class PortfolioAccessibilityTests(unittest.TestCase):
             ),
             self.parser.github_profile_links,
         )
+
+    def test_core_demo_cards_link_to_run_guides_and_limits(self):
+        expected_guides = {
+            "FlowOps": "https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md",
+            "Garbage Route Optimizer": "https://github.com/KhangTran69/angeles-city-garbage-optimizer/blob/main/README.md#reproduce-the-optimizer-sensitivity-report",
+            "IT Help Desk & Asset Management System": "https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough",
+            "PoPify": "https://github.com/KhangTran69/popify/blob/main/README.md#isolated-interface-preview-without-docker",
+            "Philippine SMS Spam Detector": "https://github.com/KhangTran69/sms-spam-detector/blob/main/README.md#quickstart",
+        }
+        cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
+
+        for title, href in expected_guides.items():
+            with self.subTest(project=title):
+                self.assertIn(title, cards_by_title)
+                guides = [link for link in cards_by_title[title]["links"] if link["href"] == href]
+                self.assertEqual(len(guides), 1)
+                self.assertIn("Run", guides[0]["text"])
+                self.assertIn("evidence", guides[0]["text"].lower())
+                self.assertIn("limits", guides[0]["text"].lower())
+
+    def test_core_demo_cards_show_verification_counts_and_limits(self):
+        required_evidence = {
+            "FlowOps": ["461 tests passed", "20 skipped", "synthetic tickets"],
+            "Garbage Route Optimizer": ["74 tests passed", "nine synthetic benchmark runs", "no live road graph"],
+            "IT Help Desk & Asset Management System": ["107 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
+            "PoPify": ["113 tests passed", "synthetic preview", "PostgreSQL and n8n runtime remain unverified"],
+            "Philippine SMS Spam Detector": ["526 tests passed", "3 skipped", "real-world Philippine accuracy"],
+        }
+        cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
+
+        for title, phrases in required_evidence.items():
+            with self.subTest(project=title):
+                card_text = cards_by_title[title]["text"].lower()
+                for phrase in phrases:
+                    self.assertIn(phrase.lower(), card_text)
+
+    def test_bid_trace_is_listed_as_a_synthetic_reserve_demo(self):
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('class="project-reserve"', page)
+        self.assertIn('href="https://github.com/KhangTran69/bid-trace"', page)
+        self.assertIn("Bid Trace", page)
+        self.assertIn("reserve synthetic local demo", page.lower())
 
 
 if __name__ == "__main__":
