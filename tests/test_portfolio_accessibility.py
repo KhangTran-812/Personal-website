@@ -115,7 +115,7 @@ class PortfolioAccessibilityTests(unittest.TestCase):
         required_evidence = {
             "FlowOps": ["461 tests passed", "20 skipped", "synthetic tickets"],
             "Garbage Route Optimizer": ["haversine and bundled openstreetmap matrix snapshots", "all nine runs in each", "illustrative demand"],
-            "IT Help Desk & Asset Management System": ["107 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
+            "IT Help Desk & Asset Management System": ["112 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
             "PoPify": ["postgresql/fastapi/n8n demo", "all three local workflows", "synthetic data and mock actions"],
             "Philippine SMS Spam Detector": ["529 tests passed", "3 skipped", "real-world Philippine accuracy"],
         }
