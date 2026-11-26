@@ -127,8 +127,9 @@
             <h3>Garbage Route Optimizer</h3>
             <p class="project-desc">A thesis research prototype for approximate, capacity-aware truck routing using a Genetic Algorithm with 2-opt local search.</p>
             <ul class="project-highlights">
-              <li>The app can use OpenStreetMap road distances and interactive multi-truck maps; this benchmark used built-in coordinates and straight-line distances.</li>
-              <li>Clean-main checks: 74 tests passed; all nine synthetic benchmark runs were feasible. No live road graph or operational data was used, so route quality is unverified.</li>
+              <li>The app supports OpenStreetMap road distances and interactive multi-truck maps.</li>
+              <li>The retained benchmark includes Haversine and bundled OpenStreetMap matrix snapshots; all nine runs in each were feasible and did not time out.</li>
+              <li>Both use illustrative demand for six barangays. They do not establish field route quality or operational suitability.</li>
               <li>Fuel, cost, and CO₂ values are estimates from configured assumptions; demand estimates are illustrative.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack">
@@ -172,13 +173,13 @@
             <h3>PoPify</h3>
             <p class="project-desc">Delayed orders need a response that reflects the order facts. I built a local operator workflow that drafts a reply, asks for human approval, and records the mock outcome.</p>
             <ul class="project-highlights">
-              <li>Local suite: 113 tests passed. The isolated synthetic preview covers approval, rejection, retry, and recovery.</li>
-              <li>The Docker path could not run, so PostgreSQL and n8n runtime remain unverified in this review.</li>
+              <li><a href="https://github.com/KhangTran69/popify/actions/runs/45555111860" target="_blank" rel="noreferrer">GitHub Actions</a> passed a disposable PostgreSQL/FastAPI/n8n demo, including all three local workflows.</li>
+              <li>The demo uses synthetic data and mock actions; it does not call Shopify, OpenAI, or customer messaging services.</li>
             </ul>
             <ul class="tag-list" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>n8n</li></ul>
             <div class="project-links">
               <a href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/KhangTran69/popify/blob/main/README.md#isolated-interface-preview-without-docker" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for PoPify">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/KhangTran69/popify/blob/main/README.md#five-minute-demonstration" target="_blank" rel="noreferrer" aria-label="Run instructions, evidence, and limitations for PoPify">Run path, evidence &amp; limits <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
