@@ -117,7 +117,7 @@ class PortfolioAccessibilityTests(unittest.TestCase):
             "Garbage Route Optimizer": ["haversine and bundled openstreetmap matrix snapshots", "all nine runs in each", "illustrative demand"],
             "IT Help Desk & Asset Management System": ["107 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
             "PoPify": ["postgresql/fastapi/n8n demo", "all three local workflows", "synthetic data and mock actions"],
-            "Philippine SMS Spam Detector": ["526 tests passed", "3 skipped", "real-world Philippine accuracy"],
+            "Philippine SMS Spam Detector": ["529 tests passed", "3 skipped", "real-world Philippine accuracy"],
         }
         cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
 
