@@ -20,7 +20,7 @@ class PortfolioParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         classes = attrs.get("class", "").split()
-        if tag == "article" and "project-card" in classes:
+        if tag == "article" and "project" in classes:
             self._card = {"title": "", "text": "", "links": []}
             self.project_cards.append(self._card)
         if tag == "h3" and self._card:
@@ -30,7 +30,7 @@ class PortfolioParser(HTMLParser):
             if self._card is not None:
                 self._card_link = {"href": href, "text": ""}
                 self._card["links"].append(self._card_link)
-            if "project-media" in classes:
+            if "project-media-item" in classes:
                 self._link = {"attrs": attrs, "image_alts": []}
                 self.media_links.append(self._link)
             if href.startswith("https://github.com/"):
@@ -96,7 +96,7 @@ class PortfolioAccessibilityTests(unittest.TestCase):
         expected_guides = {
             "FlowOps": "https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md",
             "Garbage Route Optimizer": "https://github.com/KhangTran69/angeles-city-garbage-optimizer/blob/main/README.md#reproduce-the-optimizer-sensitivity-report",
-            "IT Help Desk & Asset Management System": "https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough",
+            "IT Help Desk and Asset Management": "https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough",
             "PoPify": "https://github.com/KhangTran69/popify/blob/main/README.md#five-minute-demonstration",
             "Philippine SMS Spam Detector": "https://github.com/KhangTran69/sms-spam-detector/blob/main/README.md#quickstart",
         }
@@ -115,9 +115,9 @@ class PortfolioAccessibilityTests(unittest.TestCase):
         required_evidence = {
             "FlowOps": ["461 tests passed", "20 skipped", "synthetic tickets"],
             "Garbage Route Optimizer": ["haversine and bundled openstreetmap matrix snapshots", "all nine runs in each", "illustrative demand"],
-            "IT Help Desk & Asset Management System": ["112 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
+            "IT Help Desk and Asset Management": ["112 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
             "PoPify": ["postgresql/fastapi/n8n demo", "all three local workflows", "synthetic data and mock actions"],
-            "Philippine SMS Spam Detector": ["529 tests passed", "3 skipped", "real-world Philippine accuracy"],
+            "Philippine SMS Spam Detector": ["529 tests passed", "3 skipped", "real-world philippine accuracy"],
         }
         cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
 
