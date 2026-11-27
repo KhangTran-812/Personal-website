@@ -52,7 +52,7 @@
       <div class="about-grid">
         <div class="about-copy">
           <p>Third-year computer science student at the City College of Angeles, graduating 2028. I build web applications, then try to break them before anyone else can.</p>
-          <p>Recent work: a genetic algorithm route optimizer in Python and a full-stack help desk in Java and Spring Boot.</p>
+          <p>Recent work: a genetic algorithm route optimizer in Python, a full-stack help desk in Java and Spring Boot, and an automation platform called FlowOps.</p>
           <p>As a QA intern at Investagrams I have executed 426 test cases with a 100 percent pass rate. Testing first is how I code: edge cases before features.</p>
         </div>
         <div class="about-side">
@@ -74,32 +74,81 @@
 
       <article class="project">
         <div class="project-copy">
-          <p class="project-kind">Thesis AL-1 research prototype</p>
-          <h3>Garbage Route Optimizer</h3>
-          <p>Capacity aware routing for Angeles City garbage trucks, solved with a genetic algorithm, 2-opt local search and real OpenStreetMap road distances.</p>
-          <p class="project-stack">Python, Streamlit, OSMnx, Folium</p>
-          <a class="text-link" href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <p class="project-kind">Workflow automation platform</p>
+          <h3>FlowOps</h3>
+          <p>IT workflow automation for support tickets and onboarding: validation, routing, durable jobs, audit logs, SLA tracking and a monitoring dashboard.</p>
+          <p class="project-note">The local demo runs on synthetic tickets: 461 tests passed, 20 skipped. External provider behavior needs credentials and is not exercised.</p>
+          <p class="project-stack">Python, FastAPI, SQLAlchemy, Pydantic, pytest, n8n, Docker</p>
+          <a class="text-link" href="https://github.com/KhangTran69/flowops" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a class="text-link" href="https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md" target="_blank" rel="noreferrer">Run path, evidence and limits</a>
         </div>
         <div class="project-media">
-          <img src="images/projects/optimizer-app.png" alt="Garbage route optimizer web app showing genetic algorithm settings, fleet capacity and barangay selection panels" width="1280" height="800" loading="lazy">
+          <a class="project-media-item" href="https://github.com/KhangTran69/flowops" target="_blank" rel="noreferrer" aria-label="Open the FlowOps repository"><img src="images/projects/flowops-dashboard.png" alt="FlowOps monitoring dashboard showing ticket counts, auto-routed runs, queue and priority breakdowns" width="1280" height="800" loading="lazy"></a>
         </div>
       </article>
 
       <article class="project project-flip">
         <div class="project-copy">
-          <p class="project-kind">Full-stack project</p>
-          <h3>IT Help Desk and Asset Management</h3>
-          <p>Ticketing and asset tracking with secure login, role based access, SLA timers and JUnit tested service rules. Built with Spring Data JPA and Flyway migrations.</p>
-          <p class="project-stack">Java, Spring Boot, Thymeleaf, MySQL, Spring Security</p>
-          <a class="text-link" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <p class="project-kind">Thesis AL-1 research prototype</p>
+          <h3>Garbage Route Optimizer</h3>
+          <p>Capacity aware routing for Angeles City garbage trucks, solved with a genetic algorithm, 2-opt local search and real OpenStreetMap road distances.</p>
+          <p class="project-note">The retained benchmark includes Haversine and bundled OpenStreetMap matrix snapshots; all nine runs in each were feasible and did not time out. Both use illustrative demand for six barangays.</p>
+          <p class="project-stack">Python, Streamlit, OSMnx, Folium</p>
+          <a class="text-link" href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a class="text-link" href="https://github.com/KhangTran69/angeles-city-garbage-optimizer/blob/main/README.md#reproduce-the-optimizer-sensitivity-report" target="_blank" rel="noreferrer">Run path, evidence and limits</a>
         </div>
         <div class="project-media">
-          <img src="images/projects/helpdesk-dashboard.png" alt="IT help desk operations dashboard with ticket counters, SLA overview and a recent tickets table" width="1280" height="800" loading="lazy">
-          <img src="images/projects/helpdesk-ticket.png" alt="Ticket progress page showing a four step status timeline from open to closed" width="1280" height="800" loading="lazy">
+          <a class="project-media-item" href="https://github.com/KhangTran69/angeles-city-garbage-optimizer" target="_blank" rel="noreferrer" aria-label="Open the Garbage Route Optimizer repository"><img src="images/projects/optimizer-app.png" alt="Garbage route optimizer web app showing genetic algorithm settings, fleet capacity and barangay selection panels" width="1280" height="800" loading="lazy"></a>
         </div>
       </article>
 
       <article class="project">
+        <div class="project-copy">
+          <p class="project-kind">Full-stack project</p>
+          <h3>IT Help Desk and Asset Management</h3>
+          <p>Ticketing and asset tracking with secure login, role based access, SLA timers and JUnit tested service rules. Built with Spring Data JPA and Flyway migrations.</p>
+          <p class="project-note">The local walkthrough uses a seeded synthetic ticket: 112 tests passed, with 5 Docker/opt-in Selenium checks skipped.</p>
+          <p class="project-stack">Java, Spring Boot, Thymeleaf, MySQL, Spring Security</p>
+          <a class="text-link" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a class="text-link" href="https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough" target="_blank" rel="noreferrer">Run path, evidence and limits</a>
+        </div>
+        <div class="project-media">
+          <a class="project-media-item" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer" aria-label="Open the IT Help Desk repository, dashboard screenshot"><img src="images/projects/helpdesk-dashboard.png" alt="IT help desk operations dashboard with ticket counters, SLA overview and a recent tickets table" width="1280" height="800" loading="lazy"></a>
+          <a class="project-media-item" href="https://github.com/KhangTran69/it-help-desk" target="_blank" rel="noreferrer" aria-label="Open the IT Help Desk repository, ticket progress screenshot"><img src="images/projects/helpdesk-ticket.png" alt="Ticket progress page showing a four step status timeline from open to closed" width="1280" height="800" loading="lazy"></a>
+        </div>
+      </article>
+
+      <article class="project project-flip">
+        <div class="project-copy">
+          <p class="project-kind">Workflow automation project</p>
+          <h3>PoPify</h3>
+          <p>Operator workflow for delayed orders: draft a reply, request human approval, record the outcome.</p>
+          <p class="project-note">GitHub Actions passed a disposable PostgreSQL/FastAPI/n8n demo, including all three local workflows. Synthetic data and mock actions; no Shopify, OpenAI or customer messaging calls.</p>
+          <p class="project-stack">Python, FastAPI, PostgreSQL, n8n</p>
+          <a class="text-link" href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a class="text-link" href="https://github.com/KhangTran69/popify/blob/main/README.md#five-minute-demonstration" target="_blank" rel="noreferrer">Run path, evidence and limits</a>
+        </div>
+        <div class="project-media">
+          <a class="project-media-item" href="https://github.com/KhangTran69/popify" target="_blank" rel="noreferrer" aria-label="Open the PoPify repository"><img src="images/projects/popify.jpg" alt="PoPify delayed order workflow interface" width="1280" height="800" loading="lazy"></a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-copy">
+          <p class="project-kind">Machine learning project</p>
+          <h3>Philippine SMS Spam Detector</h3>
+          <p>Assistive classifier and web interface that explain detected signals across English, Filipino and Taglish. Supports single, batch and side-by-side checks.</p>
+          <p class="project-note">Clean suite: 529 tests passed, 3 skipped. The synthetic benchmark does not establish real-world Philippine accuracy.</p>
+          <p class="project-stack">Python, FastAPI, scikit-learn</p>
+          <a class="text-link" href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a class="text-link" href="https://github.com/KhangTran69/sms-spam-detector/blob/main/README.md#quickstart" target="_blank" rel="noreferrer">Run path, evidence and limits</a>
+        </div>
+        <div class="project-media">
+          <a class="project-media-item" href="https://github.com/KhangTran69/sms-spam-detector" target="_blank" rel="noreferrer" aria-label="Open the Philippine SMS Spam Detector repository"><img src="images/projects/sms-spam-detector.png" alt="SMS spam detector web interface comparing messages side by side" width="1280" height="800" loading="lazy"></a>
+        </div>
+      </article>
+
+      <article class="project project-flip">
         <div class="project-copy">
           <p class="project-kind">Quality assurance internship</p>
           <h3>Investagrams QA Regression Suite</h3>
@@ -114,25 +163,13 @@
               <tr><th scope="row">Risk mix</th><td>71 high, 59 medium, 12 low</td></tr>
             </tbody>
           </table>
-          <p class="project-note">Modules included KYC, portfolio, Explore, watchlist and cash in. Documentation available on request.</p>
+          <p class="project-note">Modules included KYC, portfolio, Explore, watchlist and cash in. The figures describe the tested suite, not the absence of product defects.</p>
           <a class="text-link" href="mailto:khangwrktran@gmail.com?subject=QA%20documentation%20request">Request the documentation</a>
         </div>
         <div class="project-media project-media-empty" aria-hidden="true"></div>
       </article>
 
-      <article class="project project-flip">
-        <div class="project-copy">
-          <p class="project-kind">Workflow automation platform</p>
-          <h3>FlowOps</h3>
-          <p>IT workflow automation for support tickets and onboarding: validation, routing, durable jobs, audit logs, SLA tracking and a monitoring dashboard.</p>
-          <p class="project-stack">Python, FastAPI, SQLAlchemy, Pydantic, pytest, n8n, Docker</p>
-          <p class="project-note">Sample data is simulated for the demo. The repo ships n8n, Power Automate and Rewst workflow exports.</p>
-          <a class="text-link" href="https://github.com/KhangTran69/flowops" target="_blank" rel="noreferrer">Source on GitHub</a>
-        </div>
-        <div class="project-media">
-          <img src="images/projects/flowops-dashboard.png" alt="FlowOps monitoring dashboard showing ticket counts, auto-routed runs, queue and priority breakdowns" width="1280" height="800" loading="lazy">
-        </div>
-      </article>
+      <p class="project-reserve">Bid Trace remains a <a class="text-link" href="https://github.com/KhangTran69/bid-trace" target="_blank" rel="noreferrer">reserve synthetic local demo</a>, outside the active walkthrough.</p>
     </section>
 
     <section id="skills" class="section">
@@ -183,7 +220,7 @@
       <p>I am open to internships and junior developer roles. Email is the fastest way to reach me.</p>
       <a class="email-link" href="mailto:khangwrktran@gmail.com">khangwrktran@gmail.com</a>
       <ul class="contact-links">
-        <li><a href="https://github.com/KhangTran-812" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://github.com/KhangTran69" target="_blank" rel="noreferrer">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/khang-tran-863778303/" target="_blank" rel="noreferrer">LinkedIn</a></li>
         <li><a href="https://x.com/KhangEKS" target="_blank" rel="noreferrer">X</a></li>
         <li><a href="https://web.facebook.com/KhangEfbi/" target="_blank" rel="noreferrer">Facebook</a></li>

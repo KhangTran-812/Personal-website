@@ -27,6 +27,14 @@
         toggle.focus();
       }
     });
+
+    // Close when clicking outside the panel.
+    document.addEventListener("click", function (e) {
+      if (nav.classList.contains("nav-open") && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   function initScrollspy() {
