@@ -1,41 +1,8 @@
-/* ============================================================
-   Khang B. Tran — Portfolio interactions
-   Typing effect (Typed.js w/ fallback), mobile nav, scrollspy,
-   reveal-on-scroll, footer year.
-   ============================================================ */
+/* Khang B. Tran portfolio: mobile nav, scrollspy, footer year. No auto-playing motion. */
 
 (function () {
   "use strict";
 
-  // Gate scroll-reveal styles to JS-enabled browsers (see .js .reveal in CSS).
-  document.documentElement.classList.add("js");
-
-  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------- Typing effect ---------- */
-  // Static fallback text already lives in the HTML (#typed), so the page
-  // reads correctly even if the CDN script or JS is unavailable.
-  function initTyped() {
-    if (typeof window.Typed !== "function") return;
-    var target = document.getElementById("typed");
-    if (!target || prefersReducedMotion) return;
-
-    new window.Typed("#typed", {
-      strings: [
-        "Aspiring Application Developer",
-        "Quality Assurance Enthusiast",
-        "Full-Stack Java Developer"
-      ],
-      typeSpeed: 45,
-      backSpeed: 28,
-      backDelay: 2000,
-      startDelay: 600,
-      loop: true,
-      smartBackspace: false
-    });
-  }
-
-  /* ---------- Mobile navigation ---------- */
   function initNav() {
     var toggle = document.getElementById("nav-toggle");
     var nav = document.getElementById("site-nav");
@@ -46,47 +13,29 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    // Close the panel after choosing a destination.
     nav.addEventListener("click", function (e) {
       if (e.target.closest("a")) {
         nav.classList.remove("nav-open");
         toggle.setAttribute("aria-expanded", "false");
       }
     });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("nav-open")) {
+        nav.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
+    });
   }
 
-  /* ---------- Reveal on scroll ---------- */
-  function initReveal() {
-    var items = document.querySelectorAll(".reveal");
-    if (!items.length || prefersReducedMotion || !("IntersectionObserver" in window)) {
-      items.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-    );
-
-    items.forEach(function (el) { observer.observe(el); });
-  }
-
-  /* ---------- Scrollspy (active nav link) ---------- */
   function initScrollspy() {
     var links = Array.prototype.slice.call(document.querySelectorAll(".site-nav a[href^='#']"));
     if (!links.length || !("IntersectionObserver" in window)) return;
 
     var map = {};
     links.forEach(function (link) {
-      var id = link.getAttribute("href").slice(1);
-      map[id] = link;
+      map[link.getAttribute("href").slice(1)] = link;
     });
 
     var observer = new IntersectionObserver(
@@ -109,15 +58,12 @@
     });
   }
 
-  /* ---------- Footer year ---------- */
   function initYear() {
     var el = document.getElementById("year");
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
-  initTyped();
   initNav();
-  initReveal();
   initScrollspy();
   initYear();
 })();
