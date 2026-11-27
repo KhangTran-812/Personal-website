@@ -97,7 +97,7 @@ class PortfolioAccessibilityTests(unittest.TestCase):
             "FlowOps": "https://github.com/KhangTran69/flowops/blob/main/docs/portfolio-demo.md",
             "Garbage Route Optimizer": "https://github.com/KhangTran69/angeles-city-garbage-optimizer/blob/main/README.md#reproduce-the-optimizer-sensitivity-report",
             "IT Help Desk & Asset Management System": "https://github.com/KhangTran69/it-help-desk/blob/main/README.md#local-demo-walkthrough",
-            "PoPify": "https://github.com/KhangTran69/popify/blob/main/README.md#isolated-interface-preview-without-docker",
+            "PoPify": "https://github.com/KhangTran69/popify/blob/main/README.md#five-minute-demonstration",
             "Philippine SMS Spam Detector": "https://github.com/KhangTran69/sms-spam-detector/blob/main/README.md#quickstart",
         }
         cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
@@ -114,10 +114,10 @@ class PortfolioAccessibilityTests(unittest.TestCase):
     def test_core_demo_cards_show_verification_counts_and_limits(self):
         required_evidence = {
             "FlowOps": ["461 tests passed", "20 skipped", "synthetic tickets"],
-            "Garbage Route Optimizer": ["74 tests passed", "nine synthetic benchmark runs", "no live road graph"],
-            "IT Help Desk & Asset Management System": ["107 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
-            "PoPify": ["113 tests passed", "synthetic preview", "PostgreSQL and n8n runtime remain unverified"],
-            "Philippine SMS Spam Detector": ["526 tests passed", "3 skipped", "real-world Philippine accuracy"],
+            "Garbage Route Optimizer": ["haversine and bundled openstreetmap matrix snapshots", "all nine runs in each", "illustrative demand"],
+            "IT Help Desk & Asset Management System": ["112 tests passed", "5 docker/opt-in selenium checks skipped", "seeded synthetic ticket"],
+            "PoPify": ["postgresql/fastapi/n8n demo", "all three local workflows", "synthetic data and mock actions"],
+            "Philippine SMS Spam Detector": ["529 tests passed", "3 skipped", "real-world Philippine accuracy"],
         }
         cards_by_title = {card["title"].strip(): card for card in self.parser.project_cards}
 
